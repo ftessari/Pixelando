@@ -1,0 +1,227 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D8F4710F-F8B3-460D-B4E7-6679D106E9AA}</ProjectGuid>
+        <ProjectVersion>18.2</ProjectVersion>
+        <MainSource>Pixelando.dpr</MainSource>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+        <FrameworkType>VCL</FrameworkType>
+        <Base>True</Base>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1025</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='iOSDevice64' and '$(Cfg_2)'=='true') or '$(Cfg_2_iOSDevice64)'!=''">
+        <Cfg_2_iOSDevice64>true</Cfg_2_iOSDevice64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <VerInfo_MinorVer>2</VerInfo_MinorVer>
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Build>4</VerInfo_Build>
+        <VerInfo_Release>2</VerInfo_Release>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.2.2.4;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <SanitizedProjectName>Pixelando</SanitizedProjectName>
+        <DCC_DependencyCheckOutputName>Pixelando.exe</DCC_DependencyCheckOutputName>
+        <DCC_UsePackage>vcl;rtl;vclx;vclimg;vclactnband;dbrtl;vcldb;vcldbx;bdertl;vcltouch;xmlrtl;dsnap;dsnapcon;TeeUI;TeeDB;Tee;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_100_140;Intraweb_100_140;VclSmp;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapServer;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;fs14;frx14;fsDB14;frxDB14;fsBDE14;frxBDE14;fsADO14;frxADO14;frxDBX14;frxe14;fsTee14;frxTee14;TCFLib140;dxCoreD14;cxLibraryD14;cxEditorsD14;cxExtEditorsD14;dxBarD14;dxBarDBNavD14;dxBarExtDBItemsD14;dxBarExtItemsD14;dxRibbonD14;cxBarEditItemD14;dxdbtrD14;dxtrmdD14;dxmdsD14;dxDockingD14;dxThemeD14;dxGDIPlusD14;dxFlowChartD14;cxPageControlD14;dxLayoutControlD14;dxNavBarD14;dxorgcD14;dxdborD14;cxGridD14;cxPivotGridD14;cxPivotGridChartD14;cxPivotGridOLAPD14;cxTreeListD14;cxTreeListdxBarPopupMenuD14;cxSchedulerD14;cxSchedulerGridD14;dxComnD14;dxsbD14;dcldxSkinsCoreD14;dxSkinsCoreD14;dxSkinscxPCPainterD14;dxSkinscxScheduler3PainterD14;dxSkinsdxDLPainterD14;dxSkinsdxBarPainterD14;dxSkinsdxNavBar2PainterD14;dxSpellCheckerD14;cxSpreadSheetD14;cxVerticalGridD14;dxPSCoreD14;dxPSLnksD14;dxPScxCommonD14;dxPScxExtCommonD14;dxPScxGrid6LnkD14;dxPScxPivotGrid2LnkD14;dxPScxScheduler3LnkD14;dxPScxSSLnkD14;dxPScxTL5LnkD14;dxPScxVGridLnkD14;dxPSTeeChartD14;dxPSDBTeeChartD14;dxPSdxOCLnkD14;dxPSdxDBOCLnkD14;dxPSdxDBTVLnkD14;dxPSdxFCLnkD14;dxPSdxLC2LnkD14;dxPScxPCProdD14;dxPsPrVwAdvD14;dxPSPrVwRibbonD14;dxSkinsdxRibbonPainterD14;dxSkinXmas2008BlueD14;dxSkinBlackD14;dxSkinBlueD14;dxSkinCaramelD14;dxSkinCoffeeD14;dxSkinDarkRoomD14;dxSkinDarkSideD14;dxSkinFoggyD14;dxSkinGlassOceansD14;dxSkiniMaginaryD14;dxSkinLilianD14;dxSkinLiquidSkyD14;dxSkinLondonLiquidSkyD14;dxSkinMcSkinD14;dxSkinMoneyTwinsD14;dxSkinOffice2007BlackD14;dxSkinOffice2007BlueD14;dxSkinOffice2007GreenD14;dxSkinOffice2007PinkD14;dxSkinOffice2007SilverD14;dxSkinOffice2010BlackD14;dxSkinOffice2010BlueD14;dxSkinOffice2010SilverD14;dxSkinPumpkinD14;dxSkinSevenD14;dxSkinSharpD14;dxSkinSilverD14;dxSkinSpringTimeD14;dxSkinStardustD14;dxSkinSummer2008D14;dxSkinValentineD14;gbCobD15;Delfi;EhLib140;FIBPlus2010;tmsd2010;mySQLDAC14;Flash;Package1;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_Platform>x86</DCC_Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Icon_MainIcon>Pixelando_Icon.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <BT_BuildType>Debug</BT_BuildType>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(ModuleName)</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <Icon_MainIcon>Pixelando_Icon.ico</Icon_MainIcon>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <AppEnableHighDPI>true</AppEnableHighDPI>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_iOSDevice64)'!=''">
+        <BT_BuildType>Debug</BT_BuildType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <AppEnableHighDPI>true</AppEnableHighDPI>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="UGetPixel.pas">
+            <Form>FGetPixel</Form>
+        </DCCReference>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">Pixelando.dpr</Source>
+                </Source>
+                <Parameters>
+                    <Parameters Name="UseLauncher">False</Parameters>
+                    <Parameters Name="LoadAllSymbols">True</Parameters>
+                    <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+                </Parameters>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">2</VersionInfo>
+                    <VersionInfo Name="Release">2</VersionInfo>
+                    <VersionInfo Name="Build">4</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1046</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">1.2.2.4</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                </VersionInfoKeys>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="\Bpl\JclBaseExpert140.bpl">File \Bpl\JclBaseExpert140.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="\Bpl\JclDebugExpert140.bpl">File \Bpl\JclDebugExpert140.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="\Bpl\JclProjectAnalysisExpert140.bpl">File \Bpl\JclProjectAnalysisExpert140.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="\Bpl\JclFavoriteFoldersExpert140.bpl">File \Bpl\JclFavoriteFoldersExpert140.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="\Bpl\JclRepositoryExpert140.bpl">File \Bpl\JclRepositoryExpert140.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="\Bpl\JclSIMDViewExpert140.bpl">File \Bpl\JclSIMDViewExpert140.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="\Bpl\JclStackTraceViewerExpert140.bpl">File \Bpl\JclStackTraceViewerExpert140.bpl not found</Excluded_Packages>
+                </Excluded_Packages>
+                <DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="__COMPAT_LAYER">&apos;RunAsAdmin&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="ALLUSERSPROFILE">&apos;C:\ProgramData&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="APPDATA">&apos;C:\Users\Lucas\AppData\Roaming&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="BDS">&apos;c:\program files\embarcadero\rad studio\7.0&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="BDSAppDataBaseDir">&apos;BDS&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="BDSCOMMONDIR">&apos;C:\Users\Public\Documents\RAD Studio\7.0&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="BDSPROJECTSDIR">&apos;C:\Users\Lucas\Documents\RAD Studio\Projects&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="BDSUSERDIR">&apos;C:\Users\Lucas\Documents\RAD Studio\7.0&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="CG_BOOST_ROOT">&apos;C:\Program Files\Embarcadero\RAD Studio\7.0\include\boost_1_39&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="CommonProgramFiles">&apos;C:\Program Files\Common Files&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="COMPUTERNAME">&apos;SUPORTELUCAS&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="ComSpec">&apos;C:\Windows\system32\cmd.exe&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="DELPHI">&apos;c:\program files\embarcadero\rad studio\7.0&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="FP_NO_HOST_CHECK">&apos;NO&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="HOMEDRIVE">&apos;C:&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="HOMEPATH">&apos;\Users\Lucas&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="LOCALAPPDATA">&apos;C:\Users\Lucas\AppData\Local&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="LOGONSERVER">&apos;\\SUPORTELUCAS&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="NUMBER_OF_PROCESSORS">&apos;4&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="OS">&apos;Windows_NT&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="Path">&apos;C:\Inprise\vbroker\bin;C:\Program Files\Embarcadero\RAD Studio\7.0\bin;C:\Users\Public\Documents\RAD Studio\7.0\Bpl;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\TortoiseSVN\bin;D:\VCL\ACBR\Lib\Delphi\LibD14&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="PATHEXT">&apos;.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="PROCESSOR_ARCHITECTURE">&apos;x86&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="PROCESSOR_IDENTIFIER">&apos;x86 Family 6 Model 60 Stepping 3, GenuineIntel&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="PROCESSOR_LEVEL">&apos;6&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="PROCESSOR_REVISION">&apos;3c03&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="ProgramData">&apos;C:\ProgramData&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="ProgramFiles">&apos;C:\Program Files&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="PSModulePath">&apos;C:\Windows\system32\WindowsPowerShell\v1.0\Modules\&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="PUBLIC">&apos;C:\Users\Public&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="SystemDrive">&apos;C:&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="SystemRoot">&apos;C:\Windows&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="TEMP">&apos;C:\Users\Lucas\AppData\Local\Temp&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="TMP">&apos;C:\Users\Lucas\AppData\Local\Temp&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="USERDOMAIN">&apos;SuporteLucas&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="USERNAME">&apos;Lucas&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="USERPROFILE">&apos;C:\Users\Lucas&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="VBROKERDIR">&apos;C:\Inprise\vbroker&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="windir">&apos;C:\Windows&apos;</DebugSysEnvironmentVariables>
+                </DebugSysEnvironmentVariables>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="iOSDevice64">True</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
